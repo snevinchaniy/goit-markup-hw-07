@@ -1,17 +1,17 @@
-.benefits {
+.draw {
   padding-bottom: 0;
 }
 
-.benefits-list {
+.draw__list {
   display: flex;
   gap: 30px;
 
-  & .item {
+  & .draw__item {
     flex-basis: calc((100% - 90px) / 4);
   }
 }
 
-.benefits-subtitle {
+.draw__subtitle {
   margin-bottom: 10px;
 
   font-weight: 700;
@@ -20,14 +20,14 @@
   text-transform: uppercase;
 }
 
-.benefits-text {
+.draw__text {
   color: var(--txt-secondary);
 
   font-size: 14px;
   line-height: 1.71;
 }
 
-.benefits-box-images {
+.draw__box-images {
   display: flex;
   justify-content: center;
   align-items: center;

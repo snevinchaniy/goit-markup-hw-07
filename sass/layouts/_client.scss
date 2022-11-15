@@ -1,14 +1,14 @@
-.client-list {
+.symbol__list {
   display: flex;
   gap: 30px;
 
-  & .item {
+  & .symbol__item {
     flex-basis: calc((100% - 150px) / 6);
     height: 92px;
   }
 }
 
-.client-link {
+.symbol__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,12 +25,12 @@
   }
 }
 
-.client-icon {
+.symbol__icon {
   fill: var(--icon-color);
   transition: fill var(--time-distribution);
 
-  .client-link:hover &,
-  .client-link:focus & {
+  .symbol__link:hover &,
+  .symbol__link:focus & {
     fill: var(--brand-color);
   }
 }
