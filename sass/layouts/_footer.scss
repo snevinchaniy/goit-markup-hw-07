@@ -29,15 +29,15 @@
   text-decoration: none;
 
   transition: color var(--time-distribution);
+
+  &:hover,
+  &:focus {
+    color: var(--brand-color);
+  }
 }
 
 .maps-link {
   color: var(--white-base);
-}
-
-.footer-link:hover,
-.footer-link:focus {
-  color: var(--brand-color);
 }
 
 /* Підвал соціальні іконки */
@@ -56,11 +56,11 @@
 .footer-soc-link {
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color var(--time-distribution);
-}
 
-.footer-soc-link:hover,
-.footer-soc-link:focus {
-  background-color: var(--brand-color);
+  &:hover,
+  &:focus {
+    background-color: var(--brand-color);
+  }
 }
 
 .footer-soc-icon {
@@ -87,16 +87,16 @@
   outline: transparent;
 
   transition: background-color var(--time-distribution);
-}
 
-.footer-input::placeholder {
-  font-size: 16px;
-  line-height: 1.25;
-  color: var(--white-transparency);
-}
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--white-transparency);
+  }
 
-.footer-input:focus {
-  border-color: var(--brand-color);
+  &:focus {
+    border-color: var(--brand-color);
+  }
 }
 
 .footer-subscribe-button {

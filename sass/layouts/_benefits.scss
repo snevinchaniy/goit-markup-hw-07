@@ -5,10 +5,10 @@
 .benefits-list {
   display: flex;
   gap: 30px;
-}
 
-.benefits-list .item {
-  flex-basis: calc((100% - 90px) / 4);
+  & .item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }
 
 .benefits-subtitle {

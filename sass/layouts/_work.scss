@@ -1,11 +1,11 @@
 .work-list {
   display: flex;
   gap: 30px;
-}
 
-.work-list .item {
-  position: relative;
-  flex-basis: calc((100% - 60px) / 3);
+  & .item {
+    position: relative;
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }
 
 .work-box {

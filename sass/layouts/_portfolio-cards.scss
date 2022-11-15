@@ -29,11 +29,11 @@
   opacity: 0;
   transform: translateY(100%);
   transition: transform var(--time-distribution), opacity var(--time-distribution);
-}
 
-.cards-item:hover .cards-overlay-text {
-  opacity: 1;
-  transform: translateY(0);
+  .cards-item:hover & {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .cards-link {
@@ -46,12 +46,12 @@
   text-decoration: none;
 
   transition: box-shadow var(--time-distribution);
-}
 
-.cards-link:hover,
-.cards-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
 }
 
 .cards-info {

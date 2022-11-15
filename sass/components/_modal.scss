@@ -7,12 +7,12 @@
   background-color: rgba(0, 0, 0, 0.2);
 
   transition: opacity var(--time-distribution), visibility var(--time-distribution);
-}
 
-.backdrop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 
 .modal-window {
@@ -31,10 +31,10 @@
   border-radius: 4px;
 
   transition: transform var(--time-distribution);
-}
 
-.backdrop.is-hidden .modal-window {
-  transform: translate(-50%, -50%) scale(0) rotate(180deg);
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0) rotate(180deg);
+  }
 }
 
 .modal-close-button {
@@ -58,12 +58,12 @@
   transform: rotate(0);
 
   transition: fill var(--time-distribution), transform var(--time-distribution);
-}
 
-.modal-close-icon:hover,
-.modal-close-icon:focus {
-  fill: var(--brand-color);
-  transform: rotate(90deg);
+  &:hover,
+  &:focus {
+    fill: var(--brand-color);
+    transform: rotate(90deg);
+  }
 }
 
 /* Модальна форма */
@@ -91,11 +91,11 @@
   letter-spacing: 0.01em;
 
   color: var(--txt-secondary);
-}
 
-.modal-label span {
-  display: block;
-  margin-bottom: 4px;
+  & span {
+    display: block;
+    margin-bottom: 4px;
+  }
 }
 
 .modal-input {
@@ -113,6 +113,10 @@
   outline: transparent;
 
   transition: border-color var(--time-distribution), fill var(--time-distribution);
+
+  &:focus {
+    border-color: var(--brand-color);
+  }
 }
 
 .modal-input-icon {
@@ -120,14 +124,10 @@
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
-}
 
-.modal-input:focus {
-  border-color: var(--brand-color);
-}
-
-.modal-input:focus + .modal-input-icon {
-  fill: var(--brand-color);
+  .modal-input:focus + & {
+    fill: var(--brand-color);
+  }
 }
 
 .modal-area-comment {
@@ -149,18 +149,18 @@
   resize: none;
 
   transition: border-color var(--time-distribution);
-}
 
-.modal-comment::placeholder {
-  font-size: 12px;
-  line-height: 1.66;
-  letter-spacing: 0.01em;
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.66;
+    letter-spacing: 0.01em;
 
-  color: rgba(117, 117, 117, 0.5);
-}
+    color: rgba(117, 117, 117, 0.5);
+  }
 
-.modal-comment:focus {
-  border-color: var(--brand-color);
+  &:focus {
+    border-color: var(--brand-color);
+  }
 }
 
 /* Умови договору */
@@ -192,16 +192,16 @@
   fill: transparent;
 
   transition: border-color var(--time-distribution);
-}
 
-.modal-agreement:checked + .modal-text-agreement span {
-  background-color: var(--brand-color);
-  border-color: transparent;
-  fill: var(--white-base);
-}
+  .modal-agreement:checked + & {
+    background-color: var(--brand-color);
+    border-color: transparent;
+    fill: var(--white-base);
+  }
 
-.modal-agreement:focus + .modal-text-agreement span {
-  border-color: var(--brand-color);
+  .modal-agreement:focus + & {
+    border-color: var(--brand-color);
+  }
 }
 
 .modal-agreement-link {

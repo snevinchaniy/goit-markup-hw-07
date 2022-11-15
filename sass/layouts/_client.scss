@@ -1,11 +1,11 @@
 .client-list {
   display: flex;
   gap: 30px;
-}
 
-.client-list .item {
-  flex-basis: calc((100% - 150px) / 6);
-  height: 92px;
+  & .item {
+    flex-basis: calc((100% - 150px) / 6);
+    height: 92px;
+  }
 }
 
 .client-link {
@@ -18,19 +18,19 @@
   border-radius: 4px;
 
   transition: border-color var(--time-distribution);
+
+  &:hover,
+  &:focus {
+    border-color: var(--brand-color);
+  }
 }
 
 .client-icon {
   fill: var(--icon-color);
   transition: fill var(--time-distribution);
-}
 
-.client-link:hover,
-.client-link:focus {
-  border-color: var(--brand-color);
-}
-
-.client-link:hover .client-icon,
-.client-link:focus .client-icon {
-  fill: var(--brand-color);
+  .client-link:hover &,
+  .client-link:focus & {
+    fill: var(--brand-color);
+  }
 }
